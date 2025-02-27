@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hyperparameter Tuning Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .section { margin-bottom: 30px; }
+        h1 { color: #333366; }
+        h2 { color: #666699; }
+        .summary { background-color: #f8f8f8; padding: 15px; border-radius: 5px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .image-container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .image-box { margin-bottom: 20px; }
+        img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <h1>Hyperparameter Tuning Dashboard</h1>
+    
+    <div class="section summary">
+        <h2>Summary</h2>
+        <p><strong>Number of Trials:</strong> 50</p>
+        <p><strong>Best Trial Value:</strong> 0.000084</p>
+        <p><strong>Best Trial Number:</strong> 38</p>
+    </div>
+    
+    <div class="section">
+        <h2>Best Hyperparameters</h2>
+        <table>
+            <tr><th>Parameter</th><th>Value</th></tr>
+            
+            <tr><td>units_1</td><td>192</td></tr>
+            
+            <tr><td>activation_1</td><td>selu</td></tr>
+            
+            <tr><td>dropout_1</td><td>0.1982692128666392</td></tr>
+            
+            <tr><td>use_attention</td><td>False</td></tr>
+            
+            <tr><td>units_2</td><td>256</td></tr>
+            
+            <tr><td>activation_2</td><td>selu</td></tr>
+            
+            <tr><td>dropout_2</td><td>0.5566600078173998</td></tr>
+            
+            <tr><td>return_sequences</td><td>False</td></tr>
+            
+            <tr><td>use_third_layer</td><td>True</td></tr>
+            
+            <tr><td>dense_layers</td><td>0</td></tr>
+            
+            <tr><td>optimizer</td><td>adamw</td></tr>
+            
+            <tr><td>learning_rate</td><td>0.0006331625707882865</td></tr>
+            
+            <tr><td>weight_decay</td><td>6.21041276921669e-05</td></tr>
+            
+            <tr><td>loss</td><td>huber</td></tr>
+            
+            <tr><td>patience</td><td>7</td></tr>
+            
+            <tr><td>epochs</td><td>27</td></tr>
+            
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2>Hyperparameter Importance</h2>
+        <img src="parameter_importance.png" alt="Parameter Importance">
+    </div>
+    
+    <div class="section">
+        <h2>Optimization History</h2>
+        <img src="optimization_history.png" alt="Optimization History">
+    </div>
+    
+    <div class="section">
+        <h2>Parameter Relationships</h2>
+        <img src="parallel_coordinates.png" alt="Parallel Coordinates">
+    </div>
+    
+    <div class="section">
+        <h2>Categorical Parameter Analysis</h2>
+        <div class="image-container">
+            
+            <div class="image-box">
+                <img src="performance_by_loss.png" alt="performance_by_loss.png">
+            </div>
+            
+            <div class="image-box">
+                <img src="performance_by_optimizer.png" alt="performance_by_optimizer.png">
+            </div>
+            
+            <div class="image-box">
+                <img src="performance_by_activation_1.png" alt="performance_by_activation_1.png">
+            </div>
+            
+            <div class="image-box">
+                <img src="performance_by_activation_2.png" alt="performance_by_activation_2.png">
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Parameter Contour Plots</h2>
+        <div class="image-container">
+            
+            <div class="image-box">
+                <img src="contour_learning_rate_vs_dropout_1.png" alt="contour_learning_rate_vs_dropout_1.png">
+            </div>
+            
+            <div class="image-box">
+                <img src="contour_epochs_vs_dropout_1.png" alt="contour_epochs_vs_dropout_1.png">
+            </div>
+            
+            <div class="image-box">
+                <img src="contour_epochs_vs_loss.png" alt="contour_epochs_vs_loss.png">
+            </div>
+            
+            <div class="image-box">
+                <img src="contour_learning_rate_vs_loss.png" alt="contour_learning_rate_vs_loss.png">
+            </div>
+            
+            <div class="image-box">
+                <img src="contour_dropout_1_vs_loss.png" alt="contour_dropout_1_vs_loss.png">
+            </div>
+            
+            <div class="image-box">
+                <img src="contour_epochs_vs_learning_rate.png" alt="contour_epochs_vs_learning_rate.png">
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Slice Plots</h2>
+        <div class="image-container">
+            
+            <div class="image-box">
+                <img src="slice_loss.png" alt="slice_loss.png">
+            </div>
+            
+            <div class="image-box">
+                <img src="slice_dropout_1.png" alt="slice_dropout_1.png">
+            </div>
+            
+            <div class="image-box">
+                <img src="slice_learning_rate.png" alt="slice_learning_rate.png">
+            </div>
+            
+            <div class="image-box">
+                <img src="slice_epochs.png" alt="slice_epochs.png">
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Trial Performance</h2>
+        <img src="trial_performance_distribution.png" alt="Trial Performance Distribution">
+    </div>
+    
+    <div class="section">
+        <h2>Parameter Evolution</h2>
+        <img src="parameter_evolution.png" alt="Parameter Evolution">
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+Model Summary for A100-Optimized LSTM
+============================================
+Best Hyperparameters: {'units_1': 128, 'activation_1': 'tanh', 'dropout_1': 0.24866602455522782, 'units_2': 128, 'activation_2': 'tanh', 'dropout_2': 0.4009984847794927, 'return_sequences': False, 'use_third_layer': True, 'optimizer': 'adam', 'learning_rate': 0.009988741857112893, 'epochs': 24}
+Mean Squared Error: 520.6204
+Root Mean Squared Error: 22.8171
+Mean Absolute Percentage Error: 14.34%
+Total Execution Time: 4.34 minutes
