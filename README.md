@@ -3,6 +3,7 @@
 This repository contains an advanced deep learning model for stock price prediction using LSTM neural networks with extensive hyperparameter optimization.
 
 Prediction :
+![prediction_a100](https://github.com/user-attachments/assets/6ac92771-341d-47bf-b693-5bdbbc1cc988)
 
 
 
@@ -39,14 +40,6 @@ seaborn
 jinja2
 ```
 
-## Installation
-
-```bash
-git clone https://github.com/yourusername/stock-price-prediction.git
-cd stock-price-prediction
-pip install -r requirements.txt
-```
-
 ## Usage
 
 1. Prepare your stock data CSV file with at least 'Date', 'Open', 'High', 'Low', 'Close', and 'Volume' columns
@@ -70,7 +63,7 @@ The model uses Optuna to optimize over 20 hyperparameters, including:
 - Learning rates (5e-5 to 5e-2)
 - Loss functions (MSE, MAE, Huber)
 
-![Hyperparameter Tuning](hyperparameter_viz/optimization_history.png)
+
 
 ## Hyperparameter Tuning Visualization
 
@@ -84,7 +77,8 @@ The project includes an extensive visualization suite for hyperparameter tuning 
 - **Evolution Analysis**: Track how parameters changed during optimization
 - **Interactive Dashboard**: HTML dashboard for comprehensive exploration
 
-![Parameter Importance](hyperparameter_viz/parameter_importance.png)
+![parameter_evolution](https://github.com/user-attachments/assets/ccd59b64-48d7-4586-aa60-764d4e940651)
+
 
 ## Model Evaluation
 
@@ -96,7 +90,8 @@ The model is evaluated using:
 - Detailed visualizations of prediction vs actual values
 - Comprehensive error analysis plots
 
-![Error Analysis](error_analysis_a100_extended.png)
+![error_analysis_a100_extended](https://github.com/user-attachments/assets/a78c90ac-0056-4214-b5bd-3cb7a606ea78)
+
 
 ## Project Structure
 
